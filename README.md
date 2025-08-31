@@ -1,6 +1,11 @@
 # About
 
-The CLI tool which can extract cookies from Cookie file and decrypt them using Windows Data Protection API (DPAPI).
+The CLI tool which can:
+- Extract Chromium-based cookies from Cookie file.
+- Decrypt them using Windows Data Protection API (DPAPI).
+- Save to file in http headers, json and netscape format.
+
+You can also decrypt cookies only for the host you need using the built-in filter.
 
 # Usage
 
