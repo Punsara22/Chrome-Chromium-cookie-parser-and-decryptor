@@ -11,7 +11,7 @@ You can also decrypt cookies only for the host you need using the built-in filte
 
 Usage: `CookiesDecryptor.exe` `<path>` `<method>` `[argument]`
 
-Path is a directory path, depends on method.
+`<path>` is a directory path, depends on method.
 
 Available methods:<br/>
 - `decrypt` — decrypts Cookie file at user profile path in `<path>\Default\Network\Cookie` and saves them to `Cookies_json.txt`, `Cookies_http.txt`, `Cookies_netscape.txt` files at `<path>` directory.<br/>
