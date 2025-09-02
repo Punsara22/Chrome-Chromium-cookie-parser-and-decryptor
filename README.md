@@ -51,4 +51,5 @@ If you got an exception `0x8009000b: Key not valid for use in specific state`, t
 
 # Todo
 - Check if Local State file is valid.
-- Check if Cookies db file is exists. 
+- Check if Cookies db file is exists.
+- Linux support.
